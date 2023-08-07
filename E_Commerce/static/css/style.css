@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Navbar styles */
+.navbar {
+   position: fixed;
+   width: 100%;
+   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkorange;
+  color: white;
+  padding: 10px 0;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 20px;
+  font-size: 20px;
+}
+
+ul li a:hover{
+  text-decoration: underline;
+  text-decoration-color: burlywood;
+}
+
+
+/* Cart styles */
+.cart {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.cart h1 {
+  margin: 0 ;
+  font-size: 18px;
+}
+
+#cart-count {
+  background-color:cornsilk;
+  color: black;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin-left: 5px;
+}
+/* Main layout */
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  /* padding: 60px 0px; */
+  margin: 80px 10px;
+  /* border: 2px solid red; */
+}
+
+/* Products section */
+.products {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap; 
+  height: auto;
+  margin-top: -20px;
+  margin-right: -10px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 250px;
+  height: 300px;
+  text-align: center;
+  margin: 20px 20px;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product p {
+  margin: 10px 0px;
+}
+
+.add-to-cart {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Categories section */
+.categories {
+  position: fixed;
+  left: 0;
+  width: 18%;
+  background-color: rgb(242, 165, 157);
+  padding: 10px;
+  margin-left: 10px;
+  height: 400px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.categories h2 {
+  margin: 0 0 10px;
+}
+
+.subCategory{
+    display: flexbox;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: darkorange;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+
+#cart{
+  /* font-size: 20px; */
+  cursor: pointer;
+}
+
+#imgcart{
+  width: 34px;
+}
+
+
+
+
+

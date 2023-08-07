@@ -1,0 +1,71 @@
+{% extends 'base.html' %} {% block title %}Home{% endblock title %} 
+{% block body %}
+<main>
+  <section class="products">
+    {% for prod in product %}
+    <div class="product">
+      <img src="{{prod.image}}" alt="Product 1" style="height: 200px" />
+      <h3>{{prod.name}}</h3>
+      <p>{{prod.price}}</p>
+      <form>
+        <input 
+          type="hidden" 
+          value="{{prod.id}}" 
+          id="prodid_{{prod.id}}" 
+          />
+        <input
+          type="hidden"
+          value="{{prod.name}}"
+          id="prodname_{{prod.name}}"
+        />
+        <input
+          type="hidden"
+          value="{{prod.price}}"
+          id="prodprice_{{prod.price}}"
+        />
+
+        <button
+          class="add-to-cart"
+          onclick="addToCart('{{prod.id}}','{{prod.name}}','{{prod.price}}')"
+        >
+          Add to Cart
+        </button>
+      </form>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section class="categories">
+    <h2>Categories</h2>
+    {% for cat in category %} {{cat.name}}
+    <ul class="subCategory">
+      {% for sub_cat in cat.sub_category_set.all %}
+      <a href="/?category={{sub_cat.id}}">{{sub_cat.name}}</a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+</main>
+
+<div id="cart-items_" 
+style=" width: 300px; height: 200px; background-color: lightgreen;
+text-align:center;
+    padding: 20px;
+    margin: auto;
+    position: fixed;
+    right:0;
+    top:0;margin-top: 60px;
+    display:none;
+    overflow: auto;">
+  
+<div id="cart-items_details" style="padding: 10px; margin: 10px"></div>
+
+  <p id="total-amount">Total Amount: $0.00</p>
+
+  <button onclick="hidecart()" style="margin-top: 50px;">
+    Close
+  </button>
+  <span><button onclick="emptyCart()">Empty Cart</button></span>
+</div>
+
+{% endblock body %}

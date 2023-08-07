@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <title>{% block title %}{% endblock title %}</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>E SHOP</h1>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Login</a></li>
+        <li><a href="">Register</a></li>
+        <li><a href="">Logout</a></li>
+      </ul>
+      <div class="cart">
+        <button id="cart" onclick="ShowCart(true)"><img src="static/images/add-to-cart.png" alt="" id="imgcart"/></button
+        ><span id="cart-count">0</span>
+      </div>
+    </nav>
+
+    {% block body %}
+    
+    {% endblock body %}
+
+    <div class="footer">
+      <!-- Footer content -->
+      <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </div>
+
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
